@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form method="POST">{% csrf_token %}
+
+        <p>Are you sure you want to delete {{notes.title}}</p>
+        <p>This action can't be undone</p>
+
+        <input type="submit" class="btn btn-danger" value="Confirm"/>
+
+        <a href="{% url 'notes.viewnote' pk=notes.id %}" class="btn btn-secondary my-5">Back</a>
+
+    </form>
+
+
+
+{% endblock %}
