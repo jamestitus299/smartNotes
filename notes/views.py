@@ -27,7 +27,7 @@ class NotesListView(LoginRequiredMixin, ListView):
     model = Notes
     context_object_name= "notes"
     template_name="notes/notes.html"
-    login_url="/admin"
+    login_url="/login"
 
     def get_queryset(self):
         return self.request.user.notes.all()
@@ -43,6 +43,7 @@ class NotesCreateView(LoginRequiredMixin, CreateView):
     success_url = '/notes/viewnotes'
     # fields = ['title', 'text']
     form_class = NotesForm
+    login_url="/login"
 
     def form_valid(self, form):
         self.object = form.save(commit=False)

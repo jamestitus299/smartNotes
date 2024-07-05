@@ -9,10 +9,25 @@
     <title>Notes</title>
 </head>
 
-<div class="my-5 text-center container">
+<body>
+    <nav class="navbar navbar-dark bg-dark">
 
-    {% block content %}
-    {% endblock %}
-</div>
+        <div class="ms-auto">
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}" class="btn btn-outline-light me-1">Logout</a>
+            {% else %}
+            <a href="{% url 'login' %}" class="btn btn-outline-light me-1">Login</a>
+            <a href="{% url 'signup' %}" class="btn btn-outline-light me-1">Signup</a>
+            {% endif %}
+
+        </div>
+
+    </nav>
+
+    <div class="my-5 text-center container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
 
 </html>
