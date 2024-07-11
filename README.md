@@ -1,6 +1,6 @@
 # Django
 
-A Django project using starter template (NOTES) -- BASIC CRUD operations
+A simple notes application. You can create, view, update and delete notes.
 
 # Base
 /home
