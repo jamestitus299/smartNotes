@@ -22,6 +22,7 @@ class LogoutInterfaceView(LogoutView):
 
 class LoginInterfaceView(LoginView):
     template_name = 'home/login.html'
+    # success_url = '/notes/viewnotes'
 
 class HomeView(TemplateView):
     template_name = 'home/welcome.html' 
