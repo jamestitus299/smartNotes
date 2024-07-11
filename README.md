@@ -1,4 +1,4 @@
-# Django
+# SmartNotes
 
 A simple notes application. You can create, view, update and delete notes.
 
